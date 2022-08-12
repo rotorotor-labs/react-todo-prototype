@@ -1,12 +1,8 @@
+import Dashboard from './components/Dashboard';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Rotorotor
-        </p>
-      </header>
-    </div>
+    <Dashboard />
   );
 }
 
