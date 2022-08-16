@@ -117,15 +117,15 @@ function Dashboard() {
   // Inside return is JSX (comments appear differently to JS).
   return (
     <main className="flex flex-col items-start justify-center gap-8 
-    m-12 mx-auto p-8 rounded-lg border w-1/2  bg-cream-500 outline outline-offset-8 outline-2 outline-cream-500">
+    m-12 mx-auto p-8 rounded-lg border w-1/2  bg-cream-500 outline outline-offset-8 outline-2 outline-cream-500 max-w-2xl">
       {/* Fragments allow you to have multiple child nodes from a component */}
       <div className="justify-self-start">
-        <h1 className="text-2xl font-bold">Dashboard</h1>
+        <h1 className="text-2xl font-bold text-slate-700">Dashboard</h1>
       </div>
 
       <section id="checklist-section" className="space-y-6 w-full">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-bold">Checklist</h2>
+          <h2 className="text-lg font-bold text-slate-700">Checklist</h2>
 
           <button
             type="button"
@@ -149,7 +149,7 @@ function Dashboard() {
       </section>
     
       <section className="progress-section space-y-6 w-full">
-        <h2 className="text-lg font-bold">Progress</h2>
+        <h2 className="text-lg font-bold text-slate-700">Progress</h2>
         <Progress
           label={"Completed"}
           percentage={Math.round(completedTasks() * 100 / todos.length)}
