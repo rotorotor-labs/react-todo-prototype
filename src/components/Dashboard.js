@@ -107,12 +107,28 @@ function Dashboard() {
   }
 
   const completedTasks = () => {
-    return todos.filter(todo => todo.status.toLowerCase() === "complete").length;
+
+    const allTasks = todos.filter(todo => todo.status.toLowerCase() === "complete").length;
+    
+    if (isNaN((allTasks * 100 / todos.length).toFixed()) ) {
+      return 0;
+    } else {
+      return (allTasks * 100 / todos.length).toFixed();
+    }
+
   }
   const inProgressTasks = () => {
-    return todos.filter(todo => todo.status.toLowerCase() === "in progress").length;
+
+      const allTasks = todos.filter(todo => todo.status.toLowerCase() === "in progress").length;
+
+      if (isNaN((allTasks * 100 / todos.length).toFixed()) ) {
+        return 0;
+      } else {
+        return (allTasks * 100 / todos.length).toFixed();
+      }
+
   }
-  
+
 
   // Inside return is JSX (comments appear differently to JS).
   return (
@@ -153,12 +169,12 @@ function Dashboard() {
         <h2 className="text-lg font-bold text-slate-700">Progress</h2>
         <Progress
           label={"Completed"}
-          percentage={Math.round(completedTasks() * 100 / todos.length)}
+          percentage={completedTasks()}
         />
-
+        
         <Progress
           label={"In Progress"}
-          percentage={Math.round(inProgressTasks() * 100 / todos.length)}
+          percentage={inProgressTasks()}
         />
       </section>
 
