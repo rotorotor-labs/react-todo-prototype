@@ -15,13 +15,13 @@ export function Checklist({ todos, handleChange, handleRemove, handleStatus }) {
     <ul className="space-y-2">
       { todos.map(todo => (
         <li className="flex items-center justify-between gap-2 mb-2 p-2 py-2 rounded border" key={todo.id}>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <button type="button" onClick={() => handleStatus(todo.id, todos)}>
               { todo.status.toLowerCase() === "complete" ?  <RiCheckboxLine/> : <RiCheckboxBlankLine /> }
             </button>
 
             <span contentEditable="true" 
-            className="text-base text-gray-600 border-b focus:outline-none focus:ring focus:ring-gray-300 px-1 rounded "
+            className="text-base text-gray-600 border-b focus:outline-none focus:ring focus:ring-gray-300 px-1 rounded break-all"
             onInput={(event) => {
                 handleChangeDebounced.current(todo.id, event.currentTarget.textContent, todos)
             } }>{todo.label}</span>

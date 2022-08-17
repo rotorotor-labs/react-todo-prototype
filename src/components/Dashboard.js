@@ -117,7 +117,8 @@ function Dashboard() {
   // Inside return is JSX (comments appear differently to JS).
   return (
     <main className="flex flex-col items-start justify-center gap-8 
-    m-12 mx-auto p-8 rounded-lg border w-1/2  bg-cream-500 outline outline-offset-8 outline-2 outline-cream-500 max-w-2xl">
+    m-12  p-8 rounded-lg border   bg-cream-500 outline outline-offset-8 outline-2 outline-cream-500 max-w-2xl
+    mx-0 w-full md:mx-auto md:w-1/2">
       {/* Fragments allow you to have multiple child nodes from a component */}
       <div className="justify-self-start">
         <h1 className="text-2xl font-bold text-slate-700">Dashboard</h1>
