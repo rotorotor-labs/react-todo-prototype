@@ -1,5 +1,7 @@
 # React Todo Prototype
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c696577d-5e90-4e0f-999c-0f1868c7e3b6/deploy-status)](https://app.netlify.com/sites/eclectic-beignet-1107fe/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
